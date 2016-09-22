@@ -5,8 +5,6 @@ RUN apt-get update && apt-get install -y libz-dev libmcrypt-dev libmemcached-dev
 RUN apt-get install -y php5-memcached 
 RUN docker-php-ext-install mcrypt mbstring tokenizer mysqli pdo_mysql
 
-RUN apt-get install zlib1g-dev
-
 # Install the php memcached extension
 RUN pecl install memcached && \
     docker-php-ext-enable memcached \
